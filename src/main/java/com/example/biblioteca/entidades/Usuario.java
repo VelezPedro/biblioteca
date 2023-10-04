@@ -1,24 +1,23 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.example.biblioteca.entidades;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import java.util.List;
 
-/**
- *
- * @author Tecno
- */
+
 @Entity
 public class Usuario {
     @Id
     private String usuario;
     private String contrasena;
+    
+    
+    @OneToMany
     private List<Libro> libros;
-
+ 
+    
     public Usuario() {
     }
 
@@ -46,5 +45,6 @@ public class Usuario {
         this.libros = libros;
     }
     
-    
+   
 }
+
